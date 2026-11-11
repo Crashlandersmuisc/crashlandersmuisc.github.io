@@ -1,0 +1,128 @@
+/*The font file was created by Andrew Tyler www.AndrewTyler.net and font@andrewtyler.net*/
+@font-face {
+  font-family: 'PixelMix';
+  src: url('assets/fonts/pixelmix.ttf') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; 
+}
+:root {
+  --dark-blue:  rgb(74, 120, 195);
+  --light-blue:  rgb(209, 226, 253);
+  --grey: #e5e9f2;
+}
+
+html {
+    background-image: url(assets/Background.jpg);
+    background-repeat: round;
+    background-size:  auto 100%;
+}
+
+body {
+  font-family: 'PixelMix';
+  font-size: 2rem;
+}
+
+.page-container {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-container {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-image-container {
+    height: 5rem; 
+    width: 100%;
+    display: block; 
+    align-content: center;
+    justify-content: center;
+}
+.title-image {
+    width: 100%;        /* Forces the image to stretch to fill its parent container */
+    max-width: 80rem;   /* Caps the maximum width so it stops growing on large screens */
+    height: 90%;       /* Automatically adjusts height to prevent stretching or distortion */
+    display: block;  
+    margin-inline: auto;
+}
+
+.email {
+    width:100%;
+    background-color: var(--dark-blue);
+    color:black;
+    text-decoration: none;
+    display: block;
+    font-size: 1.5rem;
+    height: 2rem;
+    text-align: center;
+}
+.email:hover{
+    color:  var(--grey);
+    text-decoration: none;
+}
+
+.header-image-box {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    display: block; 
+    align-self: center;
+}
+.header-image {
+    object-fit: cover;
+    object-position: 50% 25%;
+    border: 0.5rem solid var(--grey); 
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%; 
+}
+.video-title{
+    width: 100%;
+    background-color:  var(--dark-blue);
+    color:rgb(218, 231, 251);
+    display: block;
+    font-size: 2rem;
+    height: 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+}
+.videos-container {
+  width: 100%; 
+  height: 30vh;
+  display: flex;
+  flex-direction: row;
+  /*border: 1rem solid  var(--dark-blue);*/
+  background-color:  var(--dark-blue);
+  align-items: flex-start; 
+  align-self: center;
+  gap:1rem;
+}
+
+.video {
+    align-items: center;
+    justify-content: center;
+    width:auto;
+    padding: 0.5em;
+    background-color:  var(--light-blue);
+    object-fit: cover;
+    flex: 1;  
+    min-width: 0;
+    min-height: 0;
+    max-height: 25vh;
+    max-width: fit-content;
+    aspect-ratio: 16 / 9;
+    margin: auto;
+}
