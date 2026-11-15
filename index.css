@@ -6,10 +6,14 @@
   font-style: normal;
   font-display: swap; 
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 :root {
   --dark-blue:  rgb(74, 120, 195);
   --light-blue:  rgb(209, 226, 253);
-  --grey: #e5e9f2;
+  --grey: #d5d7dc;
+  --dark-grey:  #4d4e62;
 }
 
 html {
@@ -82,15 +86,134 @@ body {
     display: block;
 }
 
+.main-content-container{
+  display: flex;
+  flex-direction: row;
+  margin-top: 2rem;
+  gap:2rem;
+}
+.main-content-left{
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+.main-content-right{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.singles-title{
+   background-color: var(--dark-blue);
+    color:rgb(218, 231, 251);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    max-width: 90%;
+}
+.singles{
+  background-color: var(--grey);
+  border: 0.3rem solid  var(--dark-blue);
+  margin-bottom: 2rem;
+  max-width: 90%;
+}
+.album-and-socials{
+  display: flex;
+  flex-direction: row;
+}
+.album-container{
+  display: flex;
+  flex-direction: column;
+  max-width:60%;
+}
+.album-title{
+  background-color: var(--dark-blue);
+    color:var(--light-blue);
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.album-image{
+  background-color: var(--grey);
+  border: 0.3rem solid  var(--dark-blue);
+}
+
+.socials-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--light-blue);
+  margin: 0.5rem;
+  max-width:20%;
+}
+.socials-button{
+  aspect-ratio: 1/1;
+  background-color: var(--grey);
+}
+
+.epk, .epk:visited{
+  background-color: var(--dark-blue);
+  color: var(--light-blue);
+  text-decoration: none;
+  padding: 0.5rem;
+  height: fit-content;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+
+}
+.epk:hover{
+  color:black;
+  text-decoration: none;
+}
+
+.about-us-title{
+  align-self: flex-end;
+  background-color: var(--dark-blue);
+    color:var(--light-blue);
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    width:50%;
+}
+.about-us{
+  align-self: flex-end;
+  background-color: var(--grey);
+  border: 0.3rem solid  var(--dark-blue);
+  padding: 0.5rem;
+  font-size:small;
+  color: var(--dark-grey);
+  width:50%;
+}
+.crash-logo {
+  background-color: var(--grey);
+  margin: 2rem;
+}
+
+.gallery-title{
+  display: flex;
+  font-size: smaller;
+  justify-content: center;
+  color: var(--dark-blue);
+  width: 100%; 
+  padding-bottom: 0.5rem;
+  margin: 0;
+  margin-top: 1rem;
+}
 .gallery-container {
   display: flex;
   flex-direction: row;
   width: 100%; 
+  background-color:  var(--grey);
+  border: 2rem solid transparent; 
+  border-top: none;
+  background-clip: padding-box;
+  text-decoration: none;
 }
 .video-title{
     width: 100%;
     background-color:  var(--dark-blue);
-    color:rgb(218, 231, 251);
+    color:var(--light-blue);
     display: block;
     font-size: 2rem;
     height: 3rem;
@@ -104,25 +227,25 @@ body {
   height: 30vh;
   display: flex;
   flex-direction: row;
-  /*border: 1rem solid  var(--dark-blue);*/
-  background-color:  var(--dark-blue);
+  border: 1rem solid  var(--dark-blue);
+  background-color:  var(--light-blue);
   align-items: flex-start; 
   align-self: center;
-  gap:1rem;
 }
 
 .video {
     align-items: center;
     justify-content: center;
     width:auto;
-    padding: 0.5em;
-    background-color:  var(--light-blue);
     object-fit: cover;
     flex: 1;  
     min-width: 0;
     min-height: 0;
     max-height: 25vh;
     max-width: fit-content;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 560/315;
     margin: auto;
+    padding: 0.5em;
+    background-color:  var(--light-blue);
+    border:none;
 }
